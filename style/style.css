@@ -1,0 +1,241 @@
+/* Загальні стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Центрування контейнера */
+  /* padding: 0px 0px; */
+  position: relative;
+}
+body {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  /* background-color: aqua; */
+  line-height: 1.6;
+  color: #fff;
+}
+img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+header, footer {
+  
+  text-align: center;
+  /* padding: 10px 0; */
+}
+
+main {
+  /* padding: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+section {
+  width: 100%;
+  padding: 40px;
+  text-align: left;
+  position: relative;
+  overflow: hidden; /* Перекриває все, що виходить за межі секції */
+}
+
+.video-container {
+  max-width: 800px;
+  width: 100%;
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.header {
+  /* position: relative; */
+  overflow: hidden;
+  padding: 40px ;
+  
+}
+
+.title{
+  margin-top: 40px;
+}
+.title img{
+  margin-right: 40px;
+}
+.sub-title{
+  margin: 150px 0;
+  max-width: 400px;
+}
+
+.background-img {
+  background: url('../img/Background.png') no-repeat center center;
+  background-size: cover;
+  height: 100%; /* або інша висота, яку ви хочете */
+  width: 100%;
+
+}
+
+
+
+/* Контейнер для відео */
+.header-video-background video{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Відео займатиме всю ширину секції */
+    height: 100%; /* Відео займатиме всю висоту секції */
+    object-fit: cover;
+    z-index: -1; /* Відео знаходиться позаду контенту */
+}
+.welcome{
+  display: flex;
+  flex-wrap: wrap; /* Дозволяє елементам переноситися на новий рядок */
+
+  justify-content: center; /* Центрує елементи по горизонталі */
+  align-items: flex-start; /* Вирівнює елементи по верху контейнера */
+}
+.gif{
+  display: flex;
+}
+.gif img{
+  flex: 1 1 auto; /* flex-grow, flex-shrink, flex-basis */
+  margin: 0 ; /* Відступи між елементами */
+  box-sizing: border-box; /* Щоб відступи враховувалися в загальному розмірі елемента */
+  object-fit: cover;
+}
+.welcome-title{
+  flex: 1 1 400px; /* flex-grow, flex-shrink, flex-basis */
+  box-sizing: border-box; /* Щоб відступи враховувалися в загальному розмірі елемента */
+
+  padding: 0px 30px;
+  
+}
+.welcome-title *{
+  display: block;
+  padding: 20px 0px;
+  
+}
+.welcome-title span{
+  padding: 0;
+  
+}
+.cards h2{
+  margin-bottom: 40px;
+  
+}
+.cards-block{
+  display: flex;
+  flex-wrap: wrap; /* Дозволяє елементам переноситись на новий рядок */
+  justify-content: flex-start;
+  gap: 40px;
+}
+.cards-item {
+  flex: 1 0 300px; /* Гнучка ширина елементів */
+
+  box-sizing: border-box; /* Враховує padding в загальній ширині */
+  background-color: #ffffff9e;
+  border-radius: 30px;
+  /* padding: 30px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cards-item img{
+  min-height: 300px;
+  object-fit: contain;
+  margin: 30px;
+
+}
+.cards-item div{
+  /* display: flex;
+  flex-direction: column; */
+  min-height: 300px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px 30px;
+}
+.cards-item div h4{
+  color: palevioletred;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.cards-item div p{
+  color: black;
+  font-size: 18px;
+}
+.course{
+
+}
+.course h2{
+  margin-bottom: 40px;
+}
+.course-block{
+  display: flex;
+  flex-wrap: wrap; /* Дозволяє елементам переноситись на новий рядок */
+  justify-content: flex-start;
+  gap: 40px;
+}
+.course-items{
+  flex: 1 0 350px; /* Гнучка ширина елементів */
+
+  box-sizing: border-box; /* Враховує padding в загальній ширині */
+}
+.course-items p{
+  margin: 10px 0;
+}
+@media (max-width: 768px) {
+  .container {
+    
+      padding: 10px 10px; /* Зменшення відступів на мобільних */
+  }
+}
+.bonus-lists li{
+  padding: 10px 20px 0;
+  position: relative;
+}
+.bonus-lists li::before{
+  content: "•"; /* Крапка */
+  color: #ffffff; /* Колір крапки */
+  font-size: inherit; /* Розмір крапки */
+  position: absolute; /* Абсолютне позиціонування */
+  top: 50%; /* Вирівнювання по вертикалі */
+  left: 0; /* Початкова точка */
+  transform: translate(0px, -50%); /* Зсув ліворуч і по центру по вертикалі */
+
+}
+.footer{
+  padding: 20px;
+  background-color: rgb(44, 30, 74);
+  ;
+}
+
+.d-flex {
+  display: flex;
+}
+.align-items {
+  align-items: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.fs24{
+  font-size: 24px;
+}
+.fs40{
+  font-size: 40px;
+}
+.fs60{
+  font-size: 60px;
+}
+.relatice{
+  position: relative;
+}
